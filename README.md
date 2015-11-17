@@ -21,9 +21,9 @@ How to utilize this site.
 
 Clone this site on your desktop.
 Easiest way?
-Probably `RStudio`.
+Probably [RStudio](https://www.rstudio.com/).
 I predominently
-use `Github Desktop`
+use [Github Desktop](https://desktop.github.com/)
 because 
 
 1. it implements the advanced git recommended below -- 
@@ -86,7 +86,7 @@ is a set of versions of the files in that repository
 reflecting all changes that have been made to those
 files **while that branch is active.**
 The versions of your files on all other branches 
-remain in their existing state at the time you left the branch.
+remain in their existing states at the time you left the branch.
 Switching branches causes you to only **loses sight of** 
 the versions on the other branches,
 not lose them entirely.
@@ -102,13 +102,13 @@ so commit early and commit often.
 You can always go back to a previous version 
 (commit) if you need to.
 
->Like a `branch`,
-a `commit` enables a view into an updated version of your PC's files.
+>A `branch` is made up of a sequence of `commit`s.
+When you switch to a branch you are placed at the last `commit`.
 
-After a commit is made, 
-the differences in the files become readily available.
-If you don't like the changes you committed, you can always go back
-(revert your commit in Github Desktop).
+After making a `commit` 
+you will be able to see all the changes you made to the files.
+If you don't like the changes you can always go back
+("revert your commit" in Github Desktop).
 
 ## Submit a pull request
 
