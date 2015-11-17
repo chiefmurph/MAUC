@@ -1,5 +1,6 @@
 # MAUC
-Modeling ALAE Using Copulas
+
+**Modeling ALAE Using Copulas**
 
 Greg McNulty (FCAS),
 an actuary at SCOR and a member of the 
@@ -10,6 +11,8 @@ on that committee's wiki site
 The purpose of this github site is to implement ways
 to visualize Greg's concepts using 
 the R environment.
+
+This is a working experiment in actuarial collaboration.
 
 How to utilize this site.
 
@@ -54,7 +57,7 @@ Sync (Github Desktop) or Pull (Rstudio) often.
 
 Or...
 
-## Don't Participate
+## Or Don't Participate
 
 If you only want to use the code on this site for ideas,
 no problem,
@@ -75,7 +78,7 @@ This code is distributed under GPL 2.
 Think of git (implemented, perhaps, by Github Desktop)
 as a collection of lenses through which 
 the programs on your PC
-(RStudio, for example).
+(RStudio, for example)
 view the files on your PC
 (your R code, for example).
 A "branch" in git is just
@@ -90,11 +93,11 @@ This point bears repeating:
 >A branch enables your PC's
 programs to be aware of only the versions of your PC's files
 that have been modified while that branch has been active.
-The versions on all other branches remain in their current state.
+The versions on all other branches remain in their existing states.
 If you switch branches you will only **lose sight of** 
 the versions on the other branches,
 not lose them entirely.
-To see them again, switch back to that branch.
+To see those versions again, switch back to that branch.
 
 #### Commits
 
@@ -122,12 +125,13 @@ the version holding the "cleanest code."
 
 #### Merge conflicts
 
-Suppose the two participants
-wanting to work on enhancing Figure 1
-did not communicate.
-If they happened to make similar but not the
+Suppose two participants
+enhance Figure 1
+but do not communicate.
+If they make similar but not the
 same changes, 
-then it's first come first served,
+then it's first come first served 
+with respect to the pull request I see,
 and it will be up to the second person
 to resolve any potential conflicts.
 
