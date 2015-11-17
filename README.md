@@ -12,10 +12,11 @@ The purpose of this github site is to implement ways
 to work with Greg's concepts in 
 the [R environment](https://www.r-project.org/).
 
-The eventual outcome could be an R package of 
-tools for working with Greg's concepts.
+The eventual outcome has yet to be determined,
+but could a collection of scripts or perhaps a full R package
+for working with Greg's concepts.
 
-This site could be considered a working experiment in actuarial collaboration.
+This site might be considered a working experiment in actuarial collaboration.
 
 How to utilize this site.
 
