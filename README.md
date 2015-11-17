@@ -6,13 +6,12 @@ Greg McNulty (FCAS),
 an actuary at SCOR and a member of the 
 CAS Open Source Software Committee,
 wrote a paper posted as a blog
-on that committee's wiki site
-(http://opensourcesoftware.casact.org/blogs:2).
+on that committee's [wiki site](http://opensourcesoftware.casact.org/blogs:2).
 The purpose of this github site is to implement ways
 to visualize Greg's concepts using 
 the R environment.
 
-This is a working experiment in actuarial collaboration.
+This site should be considered a working experiment in actuarial collaboration.
 
 How to utilize this site.
 
@@ -29,10 +28,6 @@ because
 branching and pull requests, and
 2. the maintainers have been
 very responsive to my questions in the past.
-
-Even if you don't "Participate"
-you are encouraged to practice *safe branching*.
-See below.
 
 ## Participate
 
@@ -55,23 +50,19 @@ can stay up to speed.
 Easiest way to stay up to speed?
 Sync (Github Desktop) or Pull (Rstudio) often.
 
-Or...
-
-## Or Don't Participate
+## ... or Don't Participate
 
 If you only want to use the code on this site for ideas,
 no problem,
 it's open source.
-In that case,
-clone to your desktop,
-don't worry about branches if
-you don't want to,
-and enjoy.
+In that case
 
-Be courteous and give credit where credit is due.
+* clone to your desktop
+* don't worry about branches if you don't want to
+* be courteous and give credit where credit is due
+* enjoy!
 
 This code is distributed under GPL 2.
-
 
 #### Branches
 
@@ -81,18 +72,19 @@ the programs on your PC
 (RStudio, for example)
 view the files on your PC
 (your R code, for example).
-A "branch" in git is just
+A "branch" is just
 a different lens.
 You can switch lenses (branches)
-to allow your PC's programs to see 
-*different versions of your files!*
+to allow your PC's programs to 
+*see different versions of your files!*
 No versions are ever lost
-when you switch from branch to branch.
+when you switch branches.
 
 This point bears repeating:
 >A branch enables your PC's
 programs to be aware of only the versions of your PC's files
-that have been modified while that branch has been active.
+that have been modified while the 
+current branch has been active.
 The versions on all other branches remain in their existing states.
 If you switch branches you will only **lose sight of** 
 the versions on the other branches,
@@ -103,16 +95,14 @@ To see those versions again, switch back to that branch.
 
 A "commit" tells git to save that version
 of your files as a lens in its drawer of lenses.
-Commit frequently because there's virtually no overhead --
-all that's saved are your changes,
-and actuaries know that 
-storing two as-of versions versus
-storing the first version as well as the changes
-are equivalent.
+Commits have virtually no overhead --
+all that's saved are your changes --
+so commit early and commit often.
+You can always go back to a previous version 
+(commit) if you need to.
 
->Commits,
-like branches,
-allow views to different versions of your PC's files.
+>Like branches,
+commits enable views into different versions of your PC's files.
 
 ## Submit a pull request
 
@@ -133,6 +123,7 @@ same changes,
 then it's first come first served 
 with respect to the pull request I see,
 and it will be up to the second person
-to resolve any potential conflicts.
+to resolve any potential conflicts when 
+his/her version is merged in.
 
 I expect merge conflicts to be rare.
