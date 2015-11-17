@@ -39,7 +39,7 @@ Submit a pull request.
 If I accept, 
 then people visiting this site will see that someone
 is working on "EnhanceFigure1", for example.
-If that person also wants to enhance Figure 1,
+If another person also wants to enhance Figure 1,
 he/she should coordinate with you.
 
 Play around with some code to create your visualization.
@@ -48,7 +48,7 @@ Keep submitting them until you are done.
 This way, anyone who may want to jump in on the development
 can stay up to speed.
 Easiest way to stay up to speed?
-Sync (Github Desktop) or Pull (Rstudio) often.
+Sync (Github Desktop) or Pull (RStudio) often.
 
 ## ... or Don't Participate
 
@@ -62,7 +62,7 @@ In that case
 * be courteous and give credit where credit is due
 * enjoy!
 
-This code is distributed under GPL 2.
+This code on this site is being distributed under GPL 2.
 
 #### Branches
 
@@ -81,14 +81,15 @@ No versions are ever lost
 when you switch branches.
 
 This point bears repeating:
->A branch enables your PC's
-programs to be aware of only the versions of your PC's files
-that have been modified while the 
-current branch has been active.
-The versions on all other branches remain in their existing states.
-If you switch branches you will only **lose sight of** 
+>A branch of a git repository 
+is a set of versions of the files in that repository
+reflecting all changes that have been made to those
+files **while the branch is active.**
+The versions of your files on all other branches 
+remain in their existing state at the time you left the branch.
+Switching branches you only **loses sight of** 
 the versions on the other branches,
-not lose them entirely.
+not loses them entirely.
 To see those versions again, switch back to that branch.
 
 #### Commits
@@ -106,8 +107,8 @@ commits enable views into different versions of your PC's files.
 
 ## Submit a pull request
 
-Assuming you are a participant and want 
-people to see your code on this site,
+If you are a participant and want 
+people to see your code here,
 submit a request for me to pull in your code.
 I will be as responsive as possible.
 The master branch will be considered
@@ -116,14 +117,11 @@ the version holding the "cleanest code."
 #### Merge conflicts
 
 Suppose two participants
-enhance Figure 1
-but do not communicate.
-If they make similar but not the
-same changes, 
-then it's first come first served 
-with respect to the pull request I see,
-and it will be up to the second person
-to resolve any potential conflicts when 
-his/her version is merged in.
-
+enhance Figure 1 but
+are unaware of each other.
+Then priority goes to the first pull request.
+If the second person's changes conflict with 
+the previous person's changes,
+I will get a "merge conflict" when I try to merge
+and will so inform participant.
 I expect merge conflicts to be rare.
