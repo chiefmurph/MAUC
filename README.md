@@ -5,15 +5,17 @@
 Greg McNulty (FCAS),
 an actuary at SCOR and a member of the 
 CAS Open Source Software Committee,
-wrote a paper posted as a blog
-on that committee's [wiki site](http://opensourcesoftware.casact.org/blogs:2).
+wrote a paper posted as a 
+[blog](http://opensourcesoftware.casact.org/blogs:2)
+on that committee's wiki site.
 The purpose of this github site is to implement ways
 to work with Greg's concepts in 
 the [R environment](https://www.r-project.org/).
 
-The goal will be an R package of tools for working with Greg's paper.
+The eventual outcome could be an R package of 
+tools for working with Greg's concepts.
 
-This site should be considered a working experiment in actuarial collaboration.
+This site could be considered a working experiment in actuarial collaboration.
 
 How to utilize this site.
 
