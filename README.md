@@ -21,9 +21,11 @@ Probably RStudio.
 I predominently
 use Github Desktop
 because 
-(1) it implements *branching*, and
-(2) the maintainers have been
-*very* responsive to my questions in the past.
+
+1. it implements the advanced git recommended below -- 
+branching and pull requests, and
+2. the maintainers have been
+very responsive to my questions in the past.
 
 Even if you don't "Participate"
 you are encouraged to practice *safe branching*.
@@ -39,17 +41,16 @@ Submit a pull request.
 If I accept, 
 then people visiting this site will see that someone
 is working on "EnhanceFigure1", for example.
-If you think
-"Hey, I want to enhance Figure 1, too!"
-then contact the other participant and coordinate.
+If that person also wants to enhance Figure 1,
+he/she should coordinate with you.
 
 Play around with some code to create your visualization.
 Submit more pull requests.
 Keep submitting them until you are done.
 This way, anyone who may want to jump in on the development
 can stay up to speed.
-(Easiest way to stay up to speed?
-Sync often.)
+Easiest way to stay up to speed?
+Sync (Github Desktop) or Pull (Rstudio) often.
 
 Or...
 
@@ -64,7 +65,10 @@ don't worry about branches if
 you don't want to,
 and enjoy.
 
+Be courteous and give credit where credit is due.
+
 This code is distributed under GPL 2.
+
 
 #### Branches
 
@@ -83,11 +87,13 @@ No versions are ever lost
 when you switch from branch to branch.
 
 This point bears repeating:
->A branch enables Windows Explorer, OS Finder, Rstudio, and other
+>A branch enables your PC's
 programs to be aware of only the versions of your PC's files
 that have been modified while that branch has been active.
+The versions on all other branches remain in their current state.
 If you switch branches you will only **lose sight of** 
-the versions on the other branches.
+the versions on the other branches,
+not lose them entirely.
 To see them again, switch back to that branch.
 
 #### Commits
@@ -125,6 +131,4 @@ then it's first come first served,
 and it will be up to the second person
 to resolve any potential conflicts.
 
-I suspect merge conflicts will be rare,
-but please communicate well with your collaborators,
-be they explicit or implicit!
+I expect merge conflicts to be rare.
