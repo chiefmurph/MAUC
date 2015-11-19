@@ -116,7 +116,7 @@ the versions on the other branches,
 not lose them entirely.
 To see those versions again, switch back to that branch.
 
-On this project it is expected that all branches will
+It is expected that all branches On this project will
 "grow out of" the `master` branch.
 
 > The last `commit` on the `master` branch holds the 
