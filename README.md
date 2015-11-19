@@ -14,7 +14,7 @@ the [R environment](https://www.r-project.org/).
 
 The eventual outcome has yet to be determined,
 but could a collection of scripts or perhaps a full R package
-for working with Greg's concepts.
+for working with Greg's blog.
 
 This site might be considered a working experiment in actuarial collaboration.
 
@@ -49,10 +49,6 @@ plotting a loss density function.
 If another person also wants to plot a loss density function,
 he/she will see your branch (hopefully) and coordinate with you.
 
-This pull request step is optional but helps
-avoid merge conflicts. 
-See below.
-
 ## ... or Don't Participate
 
 If you only want to use the code on this site for ideas,
@@ -67,7 +63,18 @@ In that case
 
 This code on this site is being distributed under GPL 2.
 
-#### Branches
+## Pull request
+
+If you are a participant and want 
+people to see your code here,
+start a `branch` and 
+submit a `pull request` for me to pull your branch
+to the online repository.
+When your 
+I will be as responsive as possible.
+
+------------------------------
+### Git Details
 
 Think of `git` (implemented, perhaps, by Github Desktop)
 as a collection of lenses through which 
@@ -75,19 +82,33 @@ the programs on your PC
 (RStudio, for example)
 view the files on your PC
 (your R code, for example).
-A `branch` is just
-a different lens.
-You can switch lenses (branches)
-to allow your PC's programs to 
-*see different versions of your files!*
-No versions are ever lost
-when you switch branches.
+Each lens "sees" different versions of your files.
+A lens is created by a `commit`.
 
-This point bears repeating:
+#### Commits
+
+A `commit` tells git to save the current versions of your files
+so they can be found again.
+You can always go back to a previous version 
+(commit) if you need to.
+Commits have virtually no overhead --
+all that's saved are your changes --
+so there is negligent storage penalty for committing often.
+
+#### Branches
+
+A `branch` holds the sequence of `commit`s that reflect the work
+taking place to achieve some objective. 
+Switch branches to work on different aspects of project.
+To avoid conflicts between versions of a file on different branches
+it is advisable to work on different files on different branches.
+
+To repeat:
+
 >A `branch` of a git repository 
 is a set of versions of the files in that repository
 reflecting all changes that have been made to those
-files **while that branch is active.**
+files **whenever that branch is the active branch.**
 The versions of your files on all other branches 
 remain in their existing states at the time you left the branch.
 Switching branches causes you to only **loses sight of** 
@@ -95,41 +116,27 @@ the versions on the other branches,
 not lose them entirely.
 To see those versions again, switch back to that branch.
 
-#### Commits
+On this project it is expected that all branches will
+"grow out of" the `master` branch.
 
-A `commit` tells git to save that version
-of your files as a lens in its drawer of lenses.
-Commits have virtually no overhead --
-all that's saved are your changes --
-so commit early and commit often.
-You can always go back to a previous version 
-(commit) if you need to.
+> The last `commit` on the `master` branch holds the 
+production/definitive versions of the project's files.
 
->A `branch` is made up of a sequence of `commit`s.
-When you switch to a branch you are placed at the last `commit`.
+#### Merges
 
-After making a `commit` 
-you will be able to see all the changes you made to the files.
-If you don't like the changes you can always go back
-("revert your commit" in Github Desktop).
+A `merge` is git's way of blending the last `commit` 
+on a `branch` back into the `master` branch.
+The site maintainer (me) is responsible for merging.
+Just let me know when you are ready.
+If everything goes smoothly the `master` branch
+will now hold all the changes from the merged `branch`.
+But if the changes to a file on a branch no longer begin 
+from the original starting point on `master`,
+`git` will say a "merge conflict" exists and
+not allow the merge to occur.
+The best way to avoid your work causing a "merge conflict"
+is to make sure other people are not working on the same files
+you are.
+The site maintainer can help with that.
 
-## Submit a pull request
-
-If you are a participant and want 
-people to see your code here,
-submit a request for me to pull in your code.
-I will be as responsive as possible.
-The `master` branch should always be considered
-as holding the "cleanest versions."
-
-#### Merge conflicts
-
-Suppose two participants
-plot a loss density but
-are unaware of each other.
-Then priority goes to the first pull request.
-If the second person's changes conflict with 
-the previous person's,
-I will get a "merge conflict" when I try to merge,
-and will inform the second participant.
 I expect merge conflicts to be rare.
