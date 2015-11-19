@@ -132,4 +132,4 @@ If the second person's changes conflict with
 the previous person's,
 I will get a "merge conflict" when I try to merge,
 and will inform the second participant.
-I expect merge conflicts to be rare.
+I expect merge conflicts to be very rare.
