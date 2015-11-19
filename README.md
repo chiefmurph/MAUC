@@ -139,4 +139,4 @@ is to make sure other people are not working on the same files
 you are.
 The site maintainer can help with that.
 
-I expect merge conflicts to be rare.
+I expect merge conflicts to be very rare.
