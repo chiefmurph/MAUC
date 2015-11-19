@@ -1,5 +1,4 @@
 
-print(Sys.time())
 ###   1. Load R libraries required for running the code
 
 library("actuar")
