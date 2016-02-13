@@ -14,12 +14,7 @@ library("distr")
 
 ###setwd("c:\\directory") # Change this to where the .csv file with the data is stored
 
-#copula_data <- read.csv("copula_data.csv", header = TRUE)
-copula_data <- read.csv(
-  system.file("inst/extdata", 
-              "copula_data.csv",
-              mustWork = TRUE),
-  header = TRUE)
+copula_data <- read.csv("copula_data.csv", header = TRUE)
 
 alae_data <- copula_data$alae
 
@@ -105,12 +100,7 @@ plot(rankdata)
 
 
 
-#indexpo_data<-read.csv("indemnity_curve.csv", header = FALSE) 
-indexpo_data<-read.csv(
-  system.file("inst/extdata", 
-              "indemnity_curve.csv",
-              mustWork = TRUE),
-  header = FALSE)
+indexpo_data<-read.csv("indemnity_curve.csv", header = FALSE) 
 #This assumes the user already has an indemnity distribution, i.e. exposure curve, they want to use.
 
 indexpo_data[1001, 2] <- 1
@@ -185,12 +175,7 @@ write.csv(loss_dist_alaeinc, "loss_dist_alaeinc.csv")
 
 freq_at_threshold <- 16
 
-#loss_cost_exhibit_alaeinc <- read.csv("loss_cost_exhibit_input.csv", header = TRUE)
-loss_cost_exhibit_alaeinc <- read.csv(
-  system.file("inst/extdata", 
-              "loss_cost_exhibit_input.csv", 
-              mustWork = TRUE),
-  header = TRUE)
+loss_cost_exhibit_alaeinc <- read.csv("loss_cost_exhibit_input.csv", header = TRUE)
 
 layer <- function(x, limit, attachment) pmax(0, pmin(limit, x - attachment))  
 #This function calculates the reinsurance loss given the ground up loss and alae, limit and attachment.
@@ -224,12 +209,7 @@ write.csv(loss_cost_exhibit_alaeinc, "loss_cost_exhibit_output_ALAE_Incl.csv")
 ### 8b. Creation of a "Burning Cost"/"Loss Cost"/ or "Pure Premium" exhibit: ALAE Pro-rata treatment
 
 
-#loss_cost_exhibit_alaepr <- read.csv("loss_cost_exhibit_input.csv", header = TRUE)
-loss_cost_exhibit_alaepr <- read.csv(
-  system.file("inst/extdata", 
-              "loss_cost_exhibit_input.csv", 
-              mustWork = TRUE),
-  header = TRUE)
+loss_cost_exhibit_alaepr <- read.csv("loss_cost_exhibit_input.csv", header = TRUE)
 
 for (i in seq(length.out=nrow(loss_cost_exhibit_alaepr))) {
   layeredindem <- layer(simloss[,1], loss_cost_exhibit_alaepr$limit[i], loss_cost_exhibit_alaepr$attachment[i]) 
@@ -264,12 +244,7 @@ ALAE_load
 
 
 
-#loss_cost_exhibit_alaeinc_clsc <- read.csv("loss_cost_exhibit_input.csv", header = TRUE)
-loss_cost_exhibit_alaeinc_clsc <- read.csv(
-  system.file("inst/extdata", 
-              "loss_cost_exhibit_input.csv", 
-              mustWork = TRUE),
-  header = TRUE)
+loss_cost_exhibit_alaeinc_clsc <- read.csv("loss_cost_exhibit_input.csv", header = TRUE)
 
 for (i in seq(length.out=nrow(loss_cost_exhibit_alaeinc_clsc))) {
   layeredloss <- layer(simloss[,1]*ALAE_load, loss_cost_exhibit_alaeinc_clsc$limit[i], loss_cost_exhibit_alaeinc_clsc$attachment[i]) 
@@ -294,12 +269,7 @@ write.csv(loss_cost_exhibit_alaeinc_clsc, "loss_cost_exhibit_output_ALAE_Incl_cl
 ### 8d. Creation of a "Burning Cost"/"Loss Cost"/ or "Pure Premium" exhibit: ALAE Pro-rata treatment, Classical Assumption
 
 
-#loss_cost_exhibit_alaepr_clsc <- read.csv("loss_cost_exhibit_input.csv", header = TRUE)
-loss_cost_exhibit_alaepr_clsc <- read.csv(
-  system.file("inst/extdata", 
-              "loss_cost_exhibit_input.csv", 
-              mustWork = TRUE),
-  header = TRUE)
+loss_cost_exhibit_alaepr_clsc <- read.csv("loss_cost_exhibit_input.csv", header = TRUE)
 
 for (i in seq(length.out=nrow(loss_cost_exhibit_alaepr_clsc))) {
   layeredloss <- ALAE_load*layer(simloss[,1], loss_cost_exhibit_alaepr_clsc$limit[i], loss_cost_exhibit_alaepr_clsc$attachment[i]) 
