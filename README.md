@@ -1,59 +1,40 @@
-# MAUC
+# mauc
 
 **Modeling ALAE Using Copulas**
 
 Greg McNulty (FCAS),
-an actuary at SCOR and a member of the 
-CAS Open Source Software Committee,
-wrote a paper posted as a 
-[blog](http://opensourcesoftware.casact.org/blogs:2)
-on that committee's wiki site.
-The purpose of this github site is to implement ways
-to work with Greg's concepts in 
-the [R environment](https://www.r-project.org/).
+a member of the 
+[CAS Open Source Software Committee](http://opensourcesoftware.casact.org/),
+wrote the paper
+[Modeling ALAE Using Copulas](http://opensourcesoftware.casact.org/blogs:2)
+on that committee's 
+[blog site](http://opensourcesoftware.casact.org/).
+With McNulty's generous consent,
+the R code included with his paper has been uploaded to this github site.
+The goal is to facilitate ways for actuaries 
+to work with the concepts actualized through Greg's code.
+The primary outcome will be a 
+[shiny app](http://shiny.rstudio.com/)
+that "serves up"" Greg's algorithms.
 
-The eventual outcome has yet to be determined,
-but could a collection of scripts or perhaps a full R package
-for working with Greg's blog.
-
-This site might be considered a working experiment in actuarial collaboration.
-
-How to utilize this site.
-
-## Clone on your desktop
-
-Clone this site on your desktop.
-Easiest way?
-Probably [RStudio](https://www.rstudio.com/).
-I predominently
+To utilize this site,
+clone it on your desktop.
+Perhaps the easiest way to do that is via the 
+[RStudio](https://www.rstudio.com/) interface to R.
+However, for 
+[git](https://git-scm.com) I predominently
 use [Github Desktop](https://desktop.github.com/)
 because 
 
-1. it implements the advanced git recommended below -- 
-branching and pull requests, and
-2. the maintainers have been
+1. it implements
+[branching](https://git-scm.com/about/branching-and-merging), 
+a powerful workflow and one of `git`'s strengths, and
+2. its maintainers have been
 very responsive to my questions in the past.
 
-## Participate
-
-Think of something to implement in R with respect to Greg's paper.
-Suppose you want to draw a density function for loss.
-Create a branch named `PlotLossDensity`, say, using Github Desktop.
-Move to that branch.
-Do something and commit your changes.
-Submit a pull request.
-If I accept, 
-then people visiting this site will see that someone
-on the `PlotLossDensity` branch is probably working on
-plotting a loss density function.
-If another person also wants to plot a loss density function,
-he/she will see your branch (hopefully) and coordinate with you.
-
-## ... or Don't Participate
-
-If you only want to use the code on this site for ideas,
+If you only use this site as a source for ideas,
 no problem,
-it's open source.
+the code is open source.
 In that case
 
 * clone to your desktop
@@ -63,37 +44,32 @@ In that case
 
 This code on this site is being distributed under GPL 2.
 
-## Pull request
-
-If you are a participant and want 
-people to see your code here,
-start a `branch` and 
-submit a `pull request` for me to pull your branch
-to the online repository.
-When your 
-I will be as responsive as possible.
-
 ------------------------------
 ### Git Details
 
 Think of `git` (implemented, perhaps, by Github Desktop)
 as a collection of lenses through which 
 the programs on your PC
-(RStudio, for example)
+(such as `R` and `RStudio`,
+and even
+Windows' `File Explorer` and
+Apple's `Finder`)
 view the files on your PC
-(your R code, for example).
-Each lens "sees" different versions of your files.
-A lens is created by a `commit`.
+(such as R scripts).
+Each lens "sees" different versions of your files, 
+but only one "lens" can be "active" at a time.
+A "lens" is created by a `commit`.
 
 #### Commits
 
 A `commit` tells git to save the current versions of your files
 so they can be found again.
-You can always go back to a previous version 
+You can always go back and work with a previous version 
 (commit) if you need to.
-Commits have virtually no overhead --
-all that's saved are your changes --
-so there is negligent storage penalty for committing often.
+Commits have minimal overhead because in most cases
+all that is saved are your file changes.
+Therefore, as is recommended,
+"commit early and commit often."
 
 #### Branches
 
