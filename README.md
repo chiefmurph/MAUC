@@ -11,24 +11,26 @@ on that committee's
 [blog site](http://opensourcesoftware.casact.org/).
 With McNulty's generous consent,
 the R code included with his paper has been uploaded to this github site.
-The goal is to facilitate ways for actuaries 
-to work with the concepts actualized through Greg's code.
+The goal is to facilitate ways for actuaries
+to learn about and work with
+the ideas actualized through Greg's code.
 The primary outcome will be a 
 [shiny app](http://shiny.rstudio.com/)
-that "serves up"" Greg's algorithms.
+that "serves up" Greg's algorithms.
 
 To utilize this site,
 clone it on your desktop.
 Perhaps the easiest way to do that is via the 
-[RStudio](https://www.rstudio.com/) interface to R.
+[RStudio](https://www.rstudio.com/), 
+a third-party interface to R.
 However, for 
 [git](https://git-scm.com) I predominently
 use [Github Desktop](https://desktop.github.com/)
 because 
 
-1. it implements
+1. it implements an important and powerful workflow,
 [branching](https://git-scm.com/about/branching-and-merging), 
-a powerful workflow and one of `git`'s strengths, and
+that is one of `git`'s strengths, and
 2. its maintainers have been
 very responsive to my questions in the past.
 
@@ -38,27 +40,30 @@ the code is open source.
 In that case
 
 * clone to your desktop
-* don't worry about branches if you don't want to
+* do not worry about `branching` if you don't want to
 * be courteous and give credit where credit is due
 * enjoy!
 
 This code on this site is being distributed under GPL 2.
 
 ------------------------------
-### Git Details
+### Git in short
 
 Think of `git` (implemented, perhaps, by Github Desktop)
-as a collection of lenses through which 
+as a collection of "lenses" through which 
 the programs on your PC
 (such as `R` and `RStudio`,
 and even
 Windows' `File Explorer` and
 Apple's `Finder`)
-view the files on your PC
+can "see" the files on your PC
 (such as R scripts).
-Each lens "sees" different versions of your files, 
+For accessing and modifying your files, 
 but only one "lens" can be "active" at a time.
 A "lens" is created by a `commit`.
+To work with a particular "view" of your files,
+find the `commit` corresponding to that "lens"
+and make it active.
 
 #### Commits
 
