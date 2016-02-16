@@ -1,3 +1,7 @@
+library(shiny)
+# Define server logic required to draw a histogram
+shinyServer(function(input, output) {
+  
 ###   1. Load R libraries required for running the code
 
 library("actuar")
@@ -93,7 +97,9 @@ tail_correlation <- 2 - 2^(1/theta)
 tail_correlation 
 # The upper tail correlation is one way of uniquely describing a member of a one-parameter copula family (e.g. Gumbel). 
 
-#plot(rankdata)
+output$copula_data.plot <- renderPlot({
+  plot(rankdata)
+})
 
 
 ### 5. Indemnity Exposure Curve loading
@@ -301,3 +307,4 @@ write.csv(loss_cost_exhibit_alaepr_clsc, "loss_cost_exhibit_output_ALAE_Prorata_
 #Create a table of percentage differences between the two methods in the ALAE prorata case.
 
 
+})
