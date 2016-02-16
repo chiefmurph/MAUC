@@ -117,4 +117,9 @@ There are two ways to do this in `Github for Desktop`:
 git checkout master  
 git merge style
 
-2. Select the `master` branch from the drop-down box at the top towrd the left.
+2. Select the `master` branch from the drop-down box at the top towrd the left. 
+This will "check out" `master`.
+All changes on your development branch must be `committed` before you can switch
+branches.
+Then click the "Compare" button and under "Recent branches" click 
+the name of the development branch you are working on (e.g., "Tweak Readme").
