@@ -122,4 +122,7 @@ This will "check out" `master`.
 All changes on your development branch must be `committed` before you can switch
 branches.
 Then click the "Compare" button and under "Recent branches" click 
-the name of the development branch you are working on (e.g., "Tweak Readme").
+the name of the temporary branch you are working on (e.g., "Tweak Readme").
+You should now see a button labeled "Update from Tweak Readme".
+Click that and your `master` branch will reflect your changes.
+You can delete the now-obsolete temporary branch
