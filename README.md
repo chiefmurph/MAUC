@@ -20,7 +20,7 @@ that "serves up" Greg's algorithms.
 
 To utilize this site,
 clone it on your desktop.
-Perhaps the easiest way to do that is via the 
+Perhaps the easiest way to do that is via 
 [RStudio](https://www.rstudio.com/), 
 a third-party interface to R.
 However, for 
@@ -40,32 +40,39 @@ the code is open source.
 In that case
 
 * clone to your desktop
-* do not worry about `branching` if you don't want to
+* do not worry about 
+[branching](https://git-scm.com/about/branching-and-merging)
+if you don't want to
 * be courteous and give credit where credit is due
 * enjoy!
 
 This code on this site is being distributed under GPL 2.
 
 ------------------------------
-### Git in short
+## Git in short
 
 Think of `git` (implemented, perhaps, by Github Desktop)
 as a collection of "lenses" through which 
-the programs on your PC
+the programs on your computer
 (such as `R` and `RStudio`,
 and even
 Windows' `File Explorer` and
 Apple's `Finder`)
-can "see" the files on your PC
+can "see" the files on your computer
 (such as R scripts).
-For accessing and modifying your files, 
-but only one "lens" can be "active" at a time.
+Indeed, rather than there being only one version of your files
+to access and modify,
+there can exists multiple versions 
+corresponding to the multiple "lenses" you have created.
 A "lens" is created by a `commit`.
-To work with a particular "view" of your files,
+To work with a particular "view" (version) of your files,
 find the `commit` corresponding to that "lens"
 and make it active.
+`git` is the software invented by
+the creator of linux, Linus Torvalds,
+that makes this all happen.
 
-#### Commits
+### Commits
 
 A `commit` tells git to save the current versions of your files
 so they can be found again.
@@ -76,48 +83,46 @@ all that is saved are your file changes.
 Therefore, as is recommended,
 "commit early and commit often."
 
-#### Branches
+### Branches
 
 A `branch` holds the sequence of `commit`s that reflect the work
-taking place to achieve some objective. 
-Switch branches to work on different aspects of project.
-To avoid conflicts between versions of a file on different branches
-it is advisable to work on different files on different branches.
+taking place to achieve some objective.
+For example, before making changes to this `readme` file,
+I started a branch called "Tweak Readme".
 
-To repeat:
+Switch branches to work on different aspects of your project.
+For example, 
+I could simultaneously have another branch, say "Tweak R code",
+where I am working on a change to Greg's R script.
 
->A `branch` of a git repository 
-is a set of versions of the files in that repository
-reflecting all changes that have been made to those
-files **whenever that branch is the active branch.**
-The versions of your files on all other branches 
-remain in their existing states at the time you left the branch.
-Switching branches causes you to only **loses sight of** 
-the versions on the other branches,
-not lose them entirely.
-To see those versions again, switch back to that branch.
+This powerful `branching` paradigm allows different people to work on different 
+aspects of a project without stepping on each other's toes
+and without having to utilize "version names" in different copies
+of the same file 
+("code v1.r", "code v2.r", "code dmm.r", and the like).
 
-It is expected that all branches On this project will
-"grow out of" the `master` branch.
+The usual practice is for a project to have a "definitive production" branch,
+often called `master`,
+which is the practice on this site.
 
-> The last `commit` on the `master` branch holds the 
-production/definitive versions of the project's files.
+### Merges
 
-#### Merges
+A `merge` is git's way of blending two branches together. 
+For example,
+after saving the changes to this `readme` file I committed those changes
+to the "Tweak Readme" branch and then merged that branch into the master branch.
+There are two ways to do this in `Github for Desktop`:
 
-A `merge` is git's way of blending the last `commit` 
-on a `branch` back into the `master` branch.
-The site maintainer (me) is responsible for merging.
-Just let me know when you are ready.
-If everything goes smoothly the `master` branch
-will now hold all the changes from the merged `branch`.
-But if the changes to a file on a branch no longer begin 
-from the original starting point on `master`,
-`git` will say a "merge conflict" exists and
-not allow the merge to occur.
-The best way to avoid your work causing a "merge conflict"
-is to make sure other people are not working on the same files
-you are.
-The site maintainer can help with that.
+1. In the "Git Shell" available via the "gear" in the upper right corner:  
+git checkout master  
+git merge style
 
-I expect merge conflicts to be rare.
+2. Select the `master` branch from the drop-down box at the top towrd the left. 
+This will "check out" `master`.
+All changes on your development branch must be `committed` before you can switch
+branches.
+Then click the "Compare" button and under "Recent branches" click 
+the name of the temporary branch you are working on (e.g., "Tweak Readme").
+You should now see a button labeled "Update from Tweak Readme".
+Click that and your `master` branch will reflect your changes.
+You can delete the now-obsolete temporary branch
