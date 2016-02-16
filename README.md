@@ -110,5 +110,11 @@ which is the practice on this site.
 A `merge` is git's way of blending two branches together. 
 For example,
 after saving the changes to this `readme` file I committed those changes
-to the "Tweak Readme" branch and then merged that branch into the master branch
-as follows:
+to the "Tweak Readme" branch and then merged that branch into the master branch.
+There are two ways to do this in `Github for Desktop`:
+
+1. In the "Git Shell" available via the "gear" in the upper right corner:  
+git checkout master  
+git merge style
+
+2. Select the `master` branch from the drop-down box at the top towrd the left.
