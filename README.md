@@ -87,7 +87,7 @@ such as code\_v1.r, code\_v2.r, code\_AnalystA.r, and the like.
 Commits have minimal overhead because in most cases
 `git` only saves *the changes to your files.*
 Therefore, as is recommended,
-*commit early and commit often.*
+*commit early and commit often!*
 
 ### Branches
 
@@ -117,12 +117,15 @@ Given actuaries' professional requirement to maintain
 [appropriate documentation](http://actuarialstandardsboard.org/wp-content/uploads/2014/07/asop009_027.pdf),
 `git` can be an effective technical tool that 
 
-* Implements version control
-* Manages the technical workflow on complex projects, 
+* Achieves seemless version control
+* Manages the technical workflow of complex projects, 
 even those that are 100% spreadsheet oriented
 * Simplifies collaboration.
 
 ### Merges
+
+**Note: This section is included for completeness
+for maintaining the repositories of your own projects.**
 
 A `merge` is git's way of blending two branches together. 
 For example,
