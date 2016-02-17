@@ -1,3 +1,5 @@
+
+
 ###   1. Load R libraries required for running the code
 
 library("actuar")
@@ -27,7 +29,7 @@ rankdata <- sapply(copula_data , rank, ties.method = "random") / (nrow(copula_da
 summary(copula_data)
 
 plot(copula_data, log="yx")
-#abline(lm(copula_data[,2]~copula_data[,1]), untf = "TRUE")
+abline(lm(copula_data[,2]~copula_data[,1]), untf = "TRUE")
 
 
 
@@ -59,13 +61,13 @@ alae_fit4<-mle(nLL4, start = list(shape = 1.1, scale = 1000), method = "L-BFGS-B
 x<-seq(0,max(alae_data),max(alae_data)/1000) 
 # This defines the x-axis range for the following graph to encompas all ALAE data.
 
-#plot(x,plnorm(x,coef(alae_fit1)[1], coef(alae_fit1)[2]),type="l",col="red", main="ECDF vs Curve Fits")
+plot(x,plnorm(x,coef(alae_fit1)[1], coef(alae_fit1)[2]),type="l",col="red", main="ECDF vs Curve Fits")
 
 #We give each distribution a different color as indicated in the code below.
-#lines(x,pweibull(x,coef(alae_fit2)[1], coef(alae_fit2)[2]),type="l",col="blue")
-#lines(x,plgamma(x,coef(alae_fit3)[1], coef(alae_fit3)[2]),type="l",col="orange")
-#lines(x,ppareto(x,coef(alae_fit4)[1], coef(alae_fit4)[2]),type="l",col="green")
-#plot(ecdf(alae_data),add=TRUE)
+lines(x,pweibull(x,coef(alae_fit2)[1], coef(alae_fit2)[2]),type="l",col="blue")
+lines(x,plgamma(x,coef(alae_fit3)[1], coef(alae_fit3)[2]),type="l",col="orange")
+lines(x,ppareto(x,coef(alae_fit4)[1], coef(alae_fit4)[2]),type="l",col="green")
+plot(ecdf(alae_data),add=TRUE)
 
 
 # At this point the user may select which fit they think is the best. I typically found the pareto to be the best fit and so the rest of the code assumes the pareto distribution is chosen. The code can be modified to make a different selection.
@@ -93,7 +95,7 @@ tail_correlation <- 2 - 2^(1/theta)
 tail_correlation 
 # The upper tail correlation is one way of uniquely describing a member of a one-parameter copula family (e.g. Gumbel). 
 
-#plot(rankdata)
+plot(rankdata)
 
 
 ### 5. Indemnity Exposure Curve loading
@@ -133,10 +135,10 @@ simloss <- cbind(distr::q(indemnity)(simcopula[,1]), qpareto(simcopula[,2], alae
 # This uses the cumulative ALAE and loss distributions to transform the copula data, which is in terms of percentiles, into loss/ALAE amounts.
 
 
-#plot(copula_data, xlim = c(0, 10^7), ylim = c(0, 1.5*10^6), main = "input data v simulated data", xlab = "indemnity", ylab = "ALAE") 
-#par(new=T)
-#plot(simloss, axes = F, type = "p", col=2, xlim = c(0, 10^7), ylim = c(0, 1.5*10^6), xlab = "", ylab = "")
-#par(new=F)
+plot(copula_data, xlim = c(0, 10^7), ylim = c(0, 1.5*10^6), main = "input data v simulated data", xlab = "indemnity", ylab = "ALAE") 
+par(new=T)
+plot(simloss, axes = F, type = "p", col=2, xlim = c(0, 10^7), ylim = c(0, 1.5*10^6), xlab = "", ylab = "")
+par(new=F)
 # This is a plot of the actual data versus simulated data.
 
 
@@ -299,5 +301,4 @@ write.csv(loss_cost_exhibit_alaepr_clsc, "loss_cost_exhibit_output_ALAE_Prorata_
 
 100*(loss_cost_exhibit_alaeinc/loss_cost_exhibit_alaeinc_clsc-1)[,3:6]
 #Create a table of percentage differences between the two methods in the ALAE prorata case.
-
 
