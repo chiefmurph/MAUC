@@ -22,7 +22,7 @@ The first goal: create a
 [shiny app](http://shiny.rstudio.com/)
 that runs McNulty's algorithms and reproduces his results.
 
-### To utilize this site
+## To utilize this site
 
 Clone this repository on your local computer.
 Perhaps the easiest way to do that is via 
@@ -35,36 +35,39 @@ because
 
 1. it implements an important and powerful workflow,
 [branching](https://git-scm.com/about/branching-and-merging), 
-that is one of `git`'s strengths, and
+one of `git`'s strengths, and
 2. its maintainers have been
 very responsive to my questions in the past.
 
 If you only use this site as a source for ideas,
 no problem,
 the code is open source.
-In that case be courteous and give credit where credit is due
+In that case be courteous and give credit where credit is due,
 and enjoy.
 
 Files on this site are being distributed under 
 [GPL 2](http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html).
 
 ------------------------------
-## Git in short
+------------------------------
+## Git guidance for *dmm*
 
-Think of `git`
+**This is a "notes" section for *dmm* for finding for later. 
+All others may kindly ignore. :-)**
+
+`git`
 as a collection of "lenses" through which 
-the programs on your computer --
+the programs on *dmm*'s computer --
 such as `R` and `RStudio`,
 and even `File Explorer` (Windows) and `Finder` (Apple) --
-can "see" the R scripts and other files on your computer.
-Indeed, rather than there being only one version of your files
+can "see" the R scripts and other files on his computer.
+Indeed, rather than there being only one version of *dmm*'s files
 to access and modify,
-there can exist multiple versions 
-corresponding to the multiple "lenses" you have created.
+there exist multiple versions 
+corresponding to the multiple "lenses" he has created.
+
 A "lens" is created by a `commit`.
-To work with a particular "view" (version) of your files,
-find the `commit` corresponding to that "lens"
-and make it active.
+
 `git` is the software invented by
 the creator of 
 [linux](https://www.linux.com), 
@@ -73,94 +76,109 @@ that makes all that happen.
 
 ### Commits
 
-A `commit` tells git to save the current versions of your files
-so they can be found again.
-You can always go back and work with a previous version 
-(commit) if you need to.
+A `commit` tells git to save the current versions of *dmm*'s files
+so their currently-existing states can be found again.
 
-This important `commit` paradigm allows an analyst to 
+This important `commit` paradigm enables *dmm* to 
 
-* create an audit trail of changes to the analysis, and
+* create an audit trail of changes to his analyses, and
 * manage version control without the need for obtuse naming conventions
-such as code\_v1.r, code\_v2.r, code\_AnalystA.r, and the like.
+such as analysis\_v1, analysis\_v2, analysis\_dmm, and the like.
 
 Commits have minimal overhead because in most cases
-`git` only saves *the changes to your files.*
+`git` only saves *the changes to the files.*
 Therefore, as is recommended,
 *commit early and commit often!*
 
 ### Branches
 
-A `branch` holds the sequence of commits that reflect the work
+A `branch` holds the sequence of commits that reflect the worksteps required
 to achieve some objective.
-For example, before making changes to this `readme` file,
-I started a branch called "temporary-branch".
-
-Switch between branches to work on different aspects of your project.
-For example, 
-I simultaneously have another branch, "Tweak R code",
-where I am working on a change to Greg's R script.
+For example,
+before changing this `readme.md` file that appears as the face of this site,
+*dmm* created another branch, `temporary-branch`,
+and switched to that branch before making his changes.
 
 The usual practice is for a project to have a "definitive production" branch,
-often called `master`,
-which is the practice on this site.
+often called `master`.
+That practice is adopted for this site.
 
-This powerful `branching` paradigm allows collaborating analysts
+This powerful `branching` paradigm allows collaborating actuaries
 to work on different 
 aspects of a project without stepping on each other's toes.
-This paradigm even extends to non-text files (like spreadsheets!)
-with the caveat that git's attempt to automatically merge two people's changes 
-to the same file
-does not work as well with binary/non-text files such as spreadsheets.
+This paradigm even extends to non-text files (like spreadsheets, a necessary evil)
+with the caveat that git's attempt to detect changes 
+automatically
+does not work as well with binary/non-text files.
 
-Given actuaries' professional requirement to maintain
+Given *dmm*'s professional requirement to maintain
 [appropriate documentation](http://actuarialstandardsboard.org/wp-content/uploads/2014/07/asop009_027.pdf),
-`git` can be an effective technical tool that 
+`git` can be an effective technical tool to 
 
-* Achieves seemless version control
-* Manages the technical workflow of complex projects, 
+* Implement seemless version control
+* Manage the technical workflow of complex projects, 
 even those that are 100% spreadsheet oriented
-* Simplifies collaboration.
+* Simplify coordination with collaborators.
 
 ### Merges
 
 **Note: This section is included for completeness
-for maintaining the repositories of your own projects.**
+for maintaining the repositories of *dmm*'s own projects.**
 
 A `merge` is git's way of blending two branches together. 
 For example,
-after saving the changes to this `readme` file I committed those changes
+after saving the changes to this `readme` file *dmm* committed those changes
 while on the `temporary-branch`.
-Now I want to put those changes into production so they will appear on this site.
-I do that by merging the `temporary-branch`
-into the `master` branch.
-
-To merge a `temporary-branch` into `master` using 
-the `Github for Desktop` GUI, proceed as follows:
+For those changes to appear on this site, 
+*dmm* merged the `temporary-branch`
+into the `master` branch
+via 
+the `Github for Desktop` GUI as follows:
 
 * Select `master` from the drop-down branch box at the top toward the left. 
 This will "check out" `master`.
-All changes in your `temporary-branch` should be `committed` before switching
-branches.
+(All changes in *dmm*'s `temporary-branch` were `committed` before he switched
+branches.)
 * Click the `Compare` button and under "Recent branches" click 
-the name of the `temporary-branch` you were working on.
+the name of the `temporary-branch`.
 * You should now see a button labeled `Update from temporary-branch`.
 Click that and you're done.
 Your `master` branch will now reflect all those `temporary-branch` changes.
-
-`temporary-branch` is now obsolete.
-You can remove its name from your list of branches as follows:
-
-* Re-select the `temporary-branch` 
+* Since `temporary-branch` is now obsolete,
+you can remove its name from your list of branches as follows:
+    * Re-select the `temporary-branch` 
 (again, from the drop-down box at the top toward the left).
-* Click the "gear" again and you should see the option to 
+    * Click the "gear" again and you should see the option to 
 `Delete temporary-branch`.
-* Select that option
+    * Select that option
 and `temporary-branch` will no longer clutter your list of branches.
 
-You are ready to start the next phase of your analysis.
+### Checking out previous versions
 
-Bottom line,
+**Not fully tested for all conceivable situations!**
 
-* Don't Be Afraid to Commit
-* Happy Branching!
+With Github Desktop (GHDT) click "History" and find the commit
+of the state of the project you want to resurrect.
+Note: you may have to switch to `master`.
+Click the commit's *SHA-1 hash*,
+the first seven alphanumeric characters of which appear under the 
+title of the commit.
+Using the gear again, `Open in Git Shell`.
+At the prompt, type
+
+    git checkout Ctrl-v [Enter]  
+Your files and folders will magically appear in the state they existed
+when you made that commit.
+
+#### Oops! Undo.
+
+Sometimes you make a complicated change to a file that you want to 
+completely ignore but, unfortunately,
+you accidentally saved your changes.
+You would like to go back to the version just before the save.
+No problem!
+Using the gear again, `Open in Git Shell`.
+At the prompt, type
+
+    git checkout `filename` [Enter]  
+Your file is restored.
