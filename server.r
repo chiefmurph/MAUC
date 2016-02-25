@@ -29,9 +29,10 @@ shinyServer(function(input, output) {
   
   summary(copula_data)
   
+  output$copula_data_plot <- renderPlot({
   plot(copula_data, log="yx")
   abline(lm(copula_data[,2]~copula_data[,1]), untf = "TRUE")
-  
+  })
   
   
   ### 3. ALAE Distribution Fitting
