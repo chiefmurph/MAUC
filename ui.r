@@ -1,9 +1,11 @@
 shinyUI(fluidPage(
-  titlePanel("shiny mauc"),
+  titlePanel("Shiny mauc: Version 1"),
   sidebarLayout(
-    # Inputs excluded for brevity
+    sidebarPanel(
+      # Inputs excluded for brevity
     ),
-  mainPanel(
-    plotOutput("copula_data_plot")
+    mainPanel(
+      plotOutput("copula_data_plot")
+    )
   )
-  ))
+))
